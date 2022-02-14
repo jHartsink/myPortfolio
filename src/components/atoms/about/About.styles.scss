@@ -1,0 +1,37 @@
+[data-component='about'] {
+  @include content-wrapper;
+  background: black;
+  overflow: hidden;
+
+  .cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .cta-link {
+      aspect-ratio: 1/1;
+      inline-size: min(250px, 100%);
+      border-radius: 50%;
+      background: red;
+      cursor: pointer;
+      outline: none;
+      border: 1px solid black;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .cta-wrapper {
+      flex-direction: row;
+
+      .cta-link {
+        inline-size: min(350px, 100%);
+      }
+    }
+  }
+}
