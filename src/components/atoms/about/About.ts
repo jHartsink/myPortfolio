@@ -17,7 +17,7 @@ export const About = defineComponent({
 
     if (about.element) {
       gsap.to(about.element, {
-        height: '100vh',
+        height: '560px',
         delay: 2,
         duration: 3,
         opacity: 1,
