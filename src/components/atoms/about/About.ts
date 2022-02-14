@@ -1,6 +1,6 @@
 import { defineComponent, refElement } from '@muban/muban';
 import gsap from 'gsap';
-import './About.scss';
+import './About.styles.scss';
 import { eases } from '../../../utils/transitions';
 
 export const About = defineComponent({
