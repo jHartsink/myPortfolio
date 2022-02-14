@@ -1,0 +1,13 @@
+[data-component='default-layout'] {
+
+  [data-component='block-renderer'] {
+    min-block-size: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    inline-size: 100%;
+
+    & > [data-component] {
+      inline-size: 100%;
+    }
+  }
+}

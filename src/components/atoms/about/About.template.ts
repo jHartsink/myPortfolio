@@ -1,13 +1,15 @@
 import type { ComponentTemplateResult } from '@muban/template';
 import { html } from '@muban/template';
-import type { AboutProps } from './About.types';
+import type { AboutTemplateProps } from './About.types';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function aboutTemplate({ src }: AboutProps): ComponentTemplateResult {
-  return html`<section data-component="about" data-ref="about">
+export function aboutTemplate({ links }: AboutTemplateProps): ComponentTemplateResult {
+  return html`<section data-component="about">
     <div class="cta-wrapper">
-      <button data-ref="aboutMe" class="aboutMe">About</button>
-      <button data-ref="project" class="project">Project</button>
+      ${links.map(
+        ({ href, copy, ariaLabel }) => html`
+          <a href=${href} class="cta-link" aria-label=${ariaLabel} data-ref="cta-link">${copy}</a>
+        `,
+      )}
     </div>
   </section>`;
 }

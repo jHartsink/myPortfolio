@@ -1,4 +1,5 @@
 import type { AppTemplateProps } from '../App.template';
+import {aboutMock} from "@/components/atoms/about/About.mock";
 
 export const data = (): AppTemplateProps => ({
   layout: {
@@ -20,10 +21,8 @@ export const data = (): AppTemplateProps => ({
         },
         {
           name: 'about',
-          props: {
-            src: '',
-          },
-        },
+          props: aboutMock,
+        }
       ],
     },
   },

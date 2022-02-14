@@ -1,46 +1,49 @@
-import { defineComponent, refElement } from '@muban/muban';
+import { defineComponent, refCollection } from '@muban/muban';
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import './About.styles.scss';
-import { eases } from '../../../utils/transitions';
+
+// import { eases } from '../../../utils/transitions';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const About = defineComponent({
   name: 'about',
   components: [],
   refs: {
-    about: refElement('about'),
-    aboutMe: refElement('aboutMe'),
-    project: refElement('project'),
+    ctaLinks: refCollection('cta-link'),
   },
 
   setup({ refs }) {
-    const { about, aboutMe, project } = refs;
+    const container = refs.self;
+    const { ctaLinks } = refs;
+    const transitionInTimeline = gsap.timeline({ paused: true });
 
-    if (about.element) {
-      gsap.to(about.element, {
-        height: '560px',
-        delay: 2,
-        duration: 3,
-        opacity: 1,
-        ease: eases.vinnieInOut,
+    if (container.element) {
+      transitionInTimeline.from(container.element, {
+        height: 0,
+        duration: 2,
+      }, 2);
+    }
+
+    transitionInTimeline.from(ctaLinks.getElements(), {
+      duration: 1,
+      stagger: 0.5,
+      opacity: 0,
+      scale: gsap.utils.wrap([0.9, 1.05, 2]),
+    });
+
+    if (container.element) {
+      gsap.to(transitionInTimeline, {
+        progress: 1,
+        duration: transitionInTimeline.duration(),
+        scrollTrigger: {
+          trigger: container.element,
+          markers: true,
+        },
       });
     }
 
-    if (aboutMe.element) {
-      gsap.to(aboutMe.element, {
-        delay: 13,
-        duration: 3,
-        opacity: 1,
-        ease: eases.vinnieInOut,
-      });
-    }
-    if (project.element) {
-      gsap.to(project.element, {
-        delay: 13,
-        duration: 3,
-        opacity: 1,
-        ease: eases.vinnieInOut,
-      });
-    }
     return [];
   },
 });
