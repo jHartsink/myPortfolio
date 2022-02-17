@@ -24,13 +24,15 @@
       place-items: center;
     }
   }
-
+.cta-link:focus {
+  outline: 2px solid blue;
+}
   @media screen and (min-width: 768px) {
     .cta-wrapper {
       flex-direction: row;
 
       .cta-link {
-        inline-size: min(350px, 100%);
+        inline-size: min(315px, 100%);
       }
     }
   }

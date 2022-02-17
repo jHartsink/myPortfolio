@@ -43,6 +43,7 @@
     "yarn": "unsupported"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@mediamonks/eslint-config-base": "^2.0.0-alpha.4",
     "@mediamonks/monck": "^1.0.1",
@@ -61,6 +62,7 @@
     "isntnt": "^1.5.2",
     "lint-staged": "^12.3.1",
     "normalize.css": "^8.0.1",
+    "plop": "^3.0.5",
     "seng-scss": "^1.2.5"
   }
 }

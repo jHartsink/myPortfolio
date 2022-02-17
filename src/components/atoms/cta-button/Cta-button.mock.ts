@@ -1,19 +1,14 @@
-import type { AboutTemplateProps } from '@/components/atoms/about/About.types';
+import type { AboutTemplateProps } from '@/components/atoms/cta-button/Cta-button.types';
 
 export const aboutMock: AboutTemplateProps = {
   links: [
     {
-      href: '#',
+      href: '/about',
       copy: 'About',
       ariaLabel: 'About Justin',
     },
     {
-      href: '#',
-      copy: 'Projects',
-      ariaLabel: 'Projects by Justin',
-    },
-    {
-      href: '#',
+      href: '/projects',
       copy: 'Projects',
       ariaLabel: 'Projects by Justin',
     },

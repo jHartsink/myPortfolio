@@ -1,5 +1,4 @@
 import type { AppTemplateProps } from '../App.template';
-import { aboutSectionMock } from '@/components/atoms/about-section/about-section.mock';
 
 export const data = (): AppTemplateProps => ({
   layout: {
@@ -9,14 +8,8 @@ export const data = (): AppTemplateProps => ({
         {
           name: 'navigationHeader',
           props: {
-            name: "",
+            name: '',
           },
-          
-        },
-        {
-          name: 'about-section',
-          props: aboutSectionMock,
-        
         },
       ],
     },

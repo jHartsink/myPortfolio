@@ -1,7 +1,7 @@
 import { defineComponent, refCollection } from '@muban/muban';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import './About.styles.scss';
+import './Cta-button.styles.scss';
 
 // import { eases } from '../../../utils/transitions';
 
@@ -20,17 +20,22 @@ export const About = defineComponent({
     const transitionInTimeline = gsap.timeline({ paused: true });
 
     if (container.element) {
-      transitionInTimeline.from(container.element, {
-        height: 0,
-        duration: 2,
-      }, 2);
+      transitionInTimeline.from(
+        container.element,
+        {
+          height: 0,
+          duration: 2,
+        },
+        2,
+      );
     }
 
     transitionInTimeline.from(ctaLinks.getElements(), {
       duration: 1,
+      delay: 13,
       stagger: 0.5,
       opacity: 0,
-      scale: gsap.utils.wrap([0.9, 1.05, 2]),
+      scale: gsap.utils.wrap([0.5, 0.5]),
     });
 
     if (container.element) {

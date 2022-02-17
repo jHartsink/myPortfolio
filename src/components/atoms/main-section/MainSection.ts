@@ -33,6 +33,13 @@ export const MainSection = defineComponent({
       masterTl.add(tl);
     });
 
+    const temporaryTl = gsap.timeline({ yoyo: true });
+    if (text.element) {
+      temporaryTl.to(text.element, {
+        text: words[0],
+      });
+    }
+    masterTl.add(temporaryTl);
     const boxTl = gsap.timeline();
 
     if (box.element) {
@@ -87,6 +94,7 @@ export const MainSection = defineComponent({
           opacity: 1,
           delay: 2,
           duration: 3,
+          scale: gsap.utils.wrap([0.9]),
         });
       }
     }

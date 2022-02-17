@@ -3,7 +3,7 @@ import { ImageTest } from '../components/image-test/ImageTest';
 import { VideoTest } from '../components/video-test/VideoTest';
 import { navigationHeader } from '@/components/atoms/navbar/NavigationHeader';
 import { MainSection } from '@/components/atoms/main-section/MainSection';
-import { About } from '@/components/atoms/about/About';
+import { About } from '@/components/atoms/cta-button/Cta-button';
 
 export const BlockRenderer = defineComponent({
   name: 'block-renderer',

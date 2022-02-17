@@ -7,7 +7,8 @@ import { toggleExpandTemplate } from '../components/atoms/toggle-expand/ToggleEx
 import { videoTestTemplate } from '../components/video-test/VideoTest.template';
 import { navigationHeaderTemplate } from '@/components/atoms/navbar/NavigationHeader.template';
 import { mainSectionTemplate } from '@/components/atoms/main-section/MainSection.template';
-import { aboutTemplate } from '@/components/atoms/about/About.template';
+import { aboutTemplate } from '@/components/atoms/cta-button/Cta-button.template';
+import { aboutSectionTemplate } from '@/components/atoms/about-section/about-section.template';
 
 const componentMap = {
   'toggle-expand': toggleExpandTemplate,
@@ -16,6 +17,7 @@ const componentMap = {
   'navigationHeader': navigationHeaderTemplate,
   'mainSection': mainSectionTemplate,
   'about' : aboutTemplate,
+  'about-section': aboutSectionTemplate,
 };
 
 export type BlockRendererTemplateProps = {
@@ -24,6 +26,6 @@ export type BlockRendererTemplateProps = {
 
 export function blockRendererTemplate({ blocks }: BlockRendererTemplateProps): string {
   return html`<div data-component="block-renderer">
-    ${renderLazyComponentTemplate(componentMap, { components: blocks })}
+    ${renderLazyComponentTemplate(componentMap, { component: blocks })}
   </div>`;
 }
