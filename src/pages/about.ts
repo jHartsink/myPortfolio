@@ -1,4 +1,5 @@
 import type { AppTemplateProps } from '../App.template';
+
 import { aboutSectionMock } from '@/components/atoms/about-section/about-section.mock';
 
 export const data = (): AppTemplateProps => ({
@@ -11,12 +12,10 @@ export const data = (): AppTemplateProps => ({
           props: {
             name: "",
           },
-          
         },
         {
           name: 'about-section',
           props: aboutSectionMock,
-        
         },
       ],
     },

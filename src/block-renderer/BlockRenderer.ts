@@ -4,6 +4,7 @@ import { VideoTest } from '../components/video-test/VideoTest';
 import { navigationHeader } from '@/components/atoms/navbar/NavigationHeader';
 import { MainSection } from '@/components/atoms/main-section/MainSection';
 import { About } from '@/components/atoms/cta-button/Cta-button';
+import { aboutSection } from '@/components/atoms/about-section/about-section';
 
 export const BlockRenderer = defineComponent({
   name: 'block-renderer',
@@ -17,6 +18,7 @@ export const BlockRenderer = defineComponent({
     navigationHeader, 
     MainSection,
     About,
+    aboutSection,
   ],
   setup() {
     return [];

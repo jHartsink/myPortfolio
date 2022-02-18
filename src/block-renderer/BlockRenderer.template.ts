@@ -17,7 +17,7 @@ const componentMap = {
   'navigationHeader': navigationHeaderTemplate,
   'mainSection': mainSectionTemplate,
   'about' : aboutTemplate,
-  'about-section': aboutSectionTemplate,
+  'about-section' : aboutSectionTemplate,
 };
 
 export type BlockRendererTemplateProps = {

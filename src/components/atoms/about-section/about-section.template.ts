@@ -5,5 +5,11 @@ import type { AboutSectionTemplateProps } from './about-section.types';
 export function aboutSectionTemplate({
   links,
 }: AboutSectionTemplateProps): ComponentTemplateResult {
-  return html`<div>hello${links}</div>`;
+  return html`<section data-component="about-me">
+          ${links.map(
+        ({ href, copy, }) => html`
+          <a href=${href} class="about-me" data-ref="about-me">${copy}</a>
+        `,
+      )}
+</section>`;
 }
