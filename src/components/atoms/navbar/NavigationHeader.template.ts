@@ -8,7 +8,10 @@ export function navigationHeaderTemplate({ name }: NavbarProps): ComponentTempla
     <div class="content-wrapper">
       <div class="navbarLogo">Justin Hartsink</div>
       <nav class="navigation">
-        <a href="#">Contact</a>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
+        <a href="/projects"> Projects</a>
       </nav>
     </div>
   </header> `;

@@ -5,11 +5,13 @@
   background-color: rgb(4, 42, 43); 
   font-size: 2rem;
   padding-top: 20px;
-  color: #ef7b45;
+  color: #cdedf6;
   padding-block-start: 20px;
   padding-block-end: 20px;
   overflow: hidden;
-
+.navbarLogo { 
+  color: #ef7b45;
+}
   .content-wrapper {
     @include content-wrapper;
     display: flex;
@@ -23,6 +25,11 @@
 
     a:not(:first-child) {
       margin-inline-start: 20px;
+    }
+  }
+  @media screen and (min-width: 320px) and (max-width: 768px) {
+    .content-wrapper  {
+      font-size: 16px;
     }
   }
 }

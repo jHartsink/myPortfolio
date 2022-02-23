@@ -1,11 +1,10 @@
 [data-component='about-me'] {
   @include content-wrapper;
-  background: black;
+  background-color: rgb(4, 42, 43);
   overflow: hidden;
   .about-wrapper {
     background: rgb(0, 0, 0);
     overflow: hidden;
-    border: 1px solid black;
     margin: 0;
     padding: 0;
     color: white;
@@ -15,7 +14,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: #cdedf6;
   }
   .main-text { 
     width: 400px;
