@@ -11,8 +11,8 @@ export function mainSectionTemplate({ src, alt }: MainSectionProps): ComponentTe
       <h1>
         <span data-ref="box" class="box"></span>
         <span data-ref="hi" class="hi">Hi, I'm</span>
-        <span data-ref="text" class="text" ></span>
-        <span data-ref="cursor" class="cursor" >_</span>
+        <span data-ref="text" class="text"></span>
+        <span data-ref="cursor" class="cursor">_</span>
       </h1>
     </div>
   </section>`;

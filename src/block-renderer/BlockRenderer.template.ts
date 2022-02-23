@@ -16,8 +16,8 @@ const componentMap = {
   'video-test': videoTestTemplate,
   'navigationHeader': navigationHeaderTemplate,
   'mainSection': mainSectionTemplate,
-  'about' : aboutTemplate,
-  'about-section' : aboutSectionTemplate,
+  'about': aboutTemplate,
+  'about-me': aboutSectionTemplate,
 };
 
 export type BlockRendererTemplateProps = {
