@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 [data-component='mainSection'] {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(4, 42, 43);
   min-block-size: 100%;
   display: grid;
   place-items: center;
@@ -23,7 +23,7 @@
   }
 }
 .hero-text {
-  color: white;
+  color: #cdedf6;
   h1 {
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
