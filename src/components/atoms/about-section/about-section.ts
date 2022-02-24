@@ -2,6 +2,7 @@ import { defineComponent } from '@muban/muban';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import './about-section.styles.scss';
+import { supportLazy } from '@muban/muban/dist/esm/lib/api/apiLazy';
 
 
 
@@ -38,3 +39,4 @@ export const AboutSection = defineComponent({
     return [];
   },
 });
+export const lazy = supportLazy(AboutSection)

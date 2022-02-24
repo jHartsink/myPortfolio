@@ -26,6 +26,6 @@ export type BlockRendererTemplateProps = {
 
 export function blockRendererTemplate({ blocks }: BlockRendererTemplateProps): string {
   return html`<div data-component="block-renderer">
-    ${renderLazyComponentTemplate(componentMap, { component: blocks })}
+    ${renderLazyComponentTemplate(componentMap, { components: blocks })}
   </div>`;
 }
